@@ -1,5 +1,5 @@
 {
-  "name": "narokishi/object-validator",
+  "name": "narokishi/lightweight-di",
   "description": "Lightweight dependency injection with lazy load for PHP applications",
   "keywords": ["php", "lightweight-di", "dependency-injection", "lazy-load-di"],
   "type": "library",
