@@ -1,0 +1,29 @@
+{
+  "name": "narokishi/object-validator",
+  "description": "Lightweight dependency injection with lazy load for PHP applications",
+  "keywords": ["php", "lightweight-di", "dependency-injection", "lazy-load-di"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tomasz Motyl",
+      "email": "tomasz.motyl806@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ],
+    "psr-4": {
+      "Narokishi\\DependencyInjection\\": "src/DependencyInjection",
+      "Narokishi\\DependencyInjection\\Tests\\": "tests/DependencyInjection"
+    }
+  },
+  "require-dev": {
+    "php-coveralls/php-coveralls": "^2.1",
+    "phpunit/phpunit": "^7.3.2"
+  }
+}
