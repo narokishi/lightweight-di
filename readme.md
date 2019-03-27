@@ -2,7 +2,7 @@
 
 | Build | Coverage | Downloads | Release | License |
 |:--------:|:--------:|:--------:|:--------:|:--------:|
-| [![Build Status](https://travis-ci.com/narokishi/lightweight-di.svg?branch=master)](https://travis-ci.com/narokishi/lightweight-di) | [![Coverage Status](https://coveralls.io/repos/github/narokishi/lightweight-di/badge.svg?branch=master)](https://coveralls.io/github/narokishi/lightweight-di?branch=master) | [![Total Downloads](https://poser.pugx.org/narokishi/lightweight-di/downloads)](https://packagist.org/packages/narokishi/lightweight-di) | [![Latest Stable Version](https://poser.pugx.org/narokishi/lightweight-di/v/stable)](https://packagist.org/packages/narokishi/lightweight-di) | [![License](https://poser.pugx.org/narokishi/lightweight-di/license)](https://packagist.org/packages/narokishi/lightweight-di) |
+
 
 
 
