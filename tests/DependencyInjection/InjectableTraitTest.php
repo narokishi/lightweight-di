@@ -18,7 +18,7 @@ final class InjectableTraitTest extends TestCase
      */
     protected $injectableTrait;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->injectableTrait = $this->getMockForTrait(InjectableTrait::class);
     }

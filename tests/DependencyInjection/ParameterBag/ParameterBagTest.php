@@ -18,7 +18,7 @@ final class ParameterBagTest extends TestCase
      */
     protected $parameterBag;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->parameterBag = new ParameterBag;
     }

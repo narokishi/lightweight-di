@@ -4,6 +4,7 @@ declare(strict_types = 1);
 namespace Narokishi\DependencyInjection\Tests;
 
 use Narokishi\DependencyInjection\Container;
+use Narokishi\DependencyInjection\Exception\RegisterServiceException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -17,7 +18,7 @@ final class ContainerTest extends TestCase
      */
     protected $container;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->container = new AccessibleContainer;
     }
@@ -93,7 +94,7 @@ final class ContainerTest extends TestCase
         $this->container->registerService($serviceClass, $definition);
 
         $this->assertInstanceOf($serviceClass, $this->container->getService($serviceClass));
-        $this->assertEquals($bootedServicesCount, count($this->container->getServices()->all()));
+        $this->assertCount($bootedServicesCount, $this->container->getServices()->all());
     }
 
     public function testDefaultLazyLoading()
@@ -102,5 +103,12 @@ final class ContainerTest extends TestCase
             return new ExampleService('exampleProperty', 'anotherExampleProperty');
         });
         $this->assertEmpty($this->container->getServices()->all());
+    }
+
+    public function testGetServiceOnUnregisteredServiceClass()
+    {
+        $this->expectException(RegisterServiceException::class);
+
+        $this->container->getService('UnknownServiceClass');
     }
 }
